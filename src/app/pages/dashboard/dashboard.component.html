@@ -1,0 +1,115 @@
+<br />
+<div class="row">
+  <div class="col-3">
+    <div class="card bg-navy custom-card">
+      <div class="card-body text-white">
+        <p class="card-text">
+          <br />
+          <br />
+          <span class=" custom-badge"
+            ><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">
+              info
+              </button>
+          </span>
+          <span class="pull-right text-white">
+            Products &nbsp;&nbsp;
+            <i class="fa fa-product-hunt"></i>
+
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card bg-blue custom-card">
+      <div class="card-body text-white">
+        <br />
+        <br />
+        <span class=" custom-badge"
+        ><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">
+              info
+              </button>
+          </span>
+        <span class="pull-right">
+          Services &nbsp;&nbsp;
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card bg-pink custom-card">
+      <div class="card-body text-white">
+        <br />
+        <br />
+        <span class=" custom-badge"
+        ><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">
+              info
+              </button>
+          </span>
+        <span class="pull-right">
+          Partners &nbsp;&nbsp;
+          <i class="fa fa-handshake-o custom-fa" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card bg-pinkish custom-card">
+      <div class="card-body text-white">
+        <br />
+        <br />
+        <span class=" custom-badge"
+        ><button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal">
+              info
+              </button>
+          </span>
+        <span class="pull-right">
+          About &nbsp;&nbsp;
+          <i class="fa fa-info-circle" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="row">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col"># Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = 'let i of userData'>
+      <th scope="row">{{i.id}}</th>
+      <td >{{i.first_name}}</td>
+      <td>{{i.last_name}}</td>
+      <td>{{i.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Product Details</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+      <ul *ngFor = "let item of productList">
+        <li>
+        {{item.pid}}
+      </li></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
